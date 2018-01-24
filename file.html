@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search places</title>
+<meta name = "viewport" content = "initial-scale= 1.0,user-scalable=no">
+<meta charset = "utf-8">
+<style>
+
+
+
+</style>
+</head>
+<body>
+<div id = "findplaces">Find Places in :</div>
+<div id = "locationfield"><input id = "autocomplete" placeholder = "Enter a city" type= "text"/>
+</div>
+<div id = "controls">
+<select id = "country">
+<option value='ind'>INDIA</option>
+</select>
+</div>
+<button onclick="myfunction()">Search</button>
+
+<script>
+funtion myfunction() {
+ var map, places, infoWindow;
+      var markers = [];
+      var autocomplete;
+      var countryRestrict = {'country': 'us'};
+      var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
+      var hostnameRegexp = new RegExp('^https?://.+?/');
+      var countries= {
+	'ind' : {
+		center : {lat : 20.5,lng : 78.9},
+		zoom : 4
+	}
+      }	
+ function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: countries['us'].zoom,
+          center: countries['us'].center,
+          mapTypeControl: false,
+          panControl: false,
+          zoomControl: false,
+          streetViewControl: false
+        });
+}
+</script>
+
+</html>
